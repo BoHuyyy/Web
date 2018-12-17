@@ -1,0 +1,55 @@
+<div class="container mt-3">
+  <h3>请假信息填写</h3>
+  <form>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">工号</span>
+      </div>
+      <input type="text" [(ngModel)]="id" class="form-control"  name="userid">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">姓名</span>
+      </div>
+      <input type="text" [(ngModel)]="username" class="form-control"  name="username">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">电话</span>
+      </div>
+      <input type="text" [(ngModel)]="phone" class="form-control"  name="userPhone">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">天数</span>
+      </div>
+      <input type="text" [(ngModel)]="days" class="form-control"  name="userDays">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">起始时间</span>
+      </div>
+      <input type="text" [(ngModel)]="starttime" class="form-control"  name="userSTime">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">结束时间</span>
+      </div>
+      <input type="text" [(ngModel)]="endtime" class="form-control"  id="usr" name="userFTime">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">请假原因</span>
+      </div>
+      <input type="text" [(ngModel)]="reason" class="form-control"  name="reason">
+    </div>
+
+    <button (click)="submit(id,username,phone,days,starttime,endtime,reason)" type="submit" class="btn btn-primary">提交</button>
+  </form>
+</div>

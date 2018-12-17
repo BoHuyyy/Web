@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>搜索</h3>
+  <form>
+    <div class="form-group">
+      <input type="text" name="num" [(ngModel)]="id" class="form-control" id="email" placeholder="Enter id">
+    </div>
+    <button (click)="select(id)" type="submit" class="btn btn-primary">搜索</button>
+  </form>
+</div>
+
+<div class="row">
+  <div *ngFor="let form of message_in" class="col-md-4 col-sm-4 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">请假单编号：{{form.num}}</p>
+        <p class="card-text">用户名：{{form.id}}</p>
+        <p class="card-text">姓名：{{form.name}}</p>
+        <p class="card-text">电话：{{form.phone}}</p>
+        <p class="card-text">原因：{{form.reason}}</p>
+        <p class="card-text">请假天数：{{form.days}}</p>
+        <p class="card-text">开始时间：{{form.beginTime}}</p>
+				<p class="card-text">结束时间：{{form.endTime}}</p>
+				<p class="card-text">状态：{{form.status}}</p>
+      </div>
+    </div>
+  </div>
+</div>

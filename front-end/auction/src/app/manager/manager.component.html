@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>请假单管理</h3>
+
+</div>
+<div class="row">
+  <div *ngFor="let manager of message_in" class="col-md-4 col-sm-4 col-lg-4">
+    <div class="card">
+      <div class="card-body" >
+        <p class="card-text">请假单编号：{{manager.num}}</p>
+        <p class="card-text">用户名：{{manager.id}}</p>
+        <p class="card-text">姓名：{{manager.name}}</p>
+        <p class="card-text">电话：{{manager.phone}}</p>
+        <p class="card-text">原因：{{manager.reason}}</p>
+        <p class="card-text">请假天数：{{manager.days}}</p>
+        <p class="card-text">开始时间：{{manager.beginTime}}</p>
+				<p class="card-text">结束时间：{{manager.endTime}}</p>
+				<p class="card-text">状态：{{manager.status}}</p>
+        <button (click)="operate(manager.num)" type="button" id="button1" class="btn btn-primary">批准</button>
+        <button (click)="delete(manager.num)" type="button" class="btn btn-primary">删除</button>
+      </div>
+    </div>
+  </div>
+</div>

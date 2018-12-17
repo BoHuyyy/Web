@@ -1,0 +1,9 @@
+<div class="container">
+  <h3>搜索</h3>
+  <form>
+    <div class="form-group">
+      <input type="text" name="id" [(ngModel)]="id" class="form-control" id="email" placeholder="表单号">
+    </div>
+    <button (click)="post(id)" type="submit" class="btn btn-primary">搜索</button>
+  </form>
+</div>

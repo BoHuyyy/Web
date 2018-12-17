@@ -1,0 +1,9 @@
+#login {
+  margin-right: 30px;
+}
+.container {
+	margin-top: 30px;
+	border: 1px solid rgba(0,0,0,0.5);
+	border-radius: 10px;
+	padding: 5px;
+}

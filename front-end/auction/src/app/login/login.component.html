@@ -1,0 +1,16 @@
+<div class="container" style="width: 400px;">
+  <h4>登录</h4>
+	    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <form>
+    <div class="form-group">
+      <label>账号:</label>
+      <input type="text" name="id" [(ngModel)]="id" class="form-control"  placeholder="Enter id" >
+    </div>
+    <div class="form-group">
+      <label>密码:</label>
+      <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Enter password">
+    </div>
+    <button (click)="find(id,password)" type="submit" id="login" class="btn btn-primary" value="login">登录</button>
+    <a routerLink="enroll"><button type="button" class="btn btn-primary">注册</button></a>
+  </form>
+</div>
