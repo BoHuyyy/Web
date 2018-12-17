@@ -1,0 +1,40 @@
+﻿请假表
+create table leaveform
+(
+	num int(10) primary key NOT NULL auto_increment,
+	ID varchar(20),
+	name varchar(20) NOT NULL,
+	phone varchar(20) NOT NULL,
+	reason varchar(20) NOT NULL,
+	days varchar(20) NOT NULL,
+	beginTime date NOT NULL,
+	endTime date NOT NULL,
+	status varchar(20) NOT NULL
+)
+auto_increment=1
+ENGINE=InnoDB
+DEFAULT CHARACTER SET = UTF8;
+员工表
+create table staff
+(
+	ID varchar(20) primary key unique,
+	name varchar(20) NOT NULL,
+	phone varchar(20) NOT NULL,
+	password varchar(20) NOT NULL
+)
+DEFAULT CHARACTER SET = UTF8;
+部门经理表
+create table manager
+(
+	ID varchar(20) primary key unique,
+	name varchar(20) NOT NULL,
+	phone varchar(20) NOT NULL,
+	password varchar(20) NOT NULL
+)
+DEFAULT CHARACTER SET = UTF8;
+
+
+插入考勤表
+insert into leaveform (ID,name,phone,reason,days,beginTime,endTime,status) values('3016218114','张三','12345678911','事假','3','2016-05-03','2016-05-05','未审批');
+插入员工表 
+insert into staff values('1','张三','12345678912','123456');
