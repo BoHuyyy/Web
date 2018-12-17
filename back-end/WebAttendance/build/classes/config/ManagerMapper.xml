@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.ManagerMapper">
+    <select id="selectManager" parameterType="model.Manager" resultMap="managerResult">
+        SELECT * 
+        FROM manager where 
+                <if test="ID != null">ID = #{ID}</if>
+    </select>
+    <resultMap id="managerResult" type="model.Manager">
+        <id column="ID" jdbcType="VARCHAR" property="ID"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+    </resultMap>
+
+	
+	<insert id="insertManager" parameterType="model.Manager" useGeneratedKeys="true">
+        INSERT INTO manager (ID,name,phone,password)
+        VALUES (#{ID},#{name},#{phone},#{password})
+    </insert>
+</mapper>

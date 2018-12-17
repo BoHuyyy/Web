@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.StaffMapper">
+
+
+	<resultMap id="StaffResult" type="model.Staff">
+		<result column="ID" jdbcType="VARCHAR" property="ID" />
+		<result column="name"  jdbcType="VARCHAR" property="name" />
+		<result column="phone"  jdbcType="VARCHAR" property="phone" />
+		<result column="password"  jdbcType="VARCHAR" property="password" />
+		
+	</resultMap>
+
+	<select id="selectStaff" parameterType="model.Staff" resultMap="StaffResult">
+		SELECT *
+		FROM staff where ID = #{ID}
+<!--  
+		name 的判断空在传入参数时判断
+		<if test="true">
+			<where>
+				<if test="name != null">user_name = #{name}</if>
+			</where>
+		</if>
+-->
+	</select>
+	
+	<insert id="insertStaff" parameterType="model.Staff" useGeneratedKeys="true">
+        INSERT INTO staff (ID,name,phone,password)
+        VALUES (#{ID},#{name},#{phone},#{password})
+    </insert>
+
+</mapper>
